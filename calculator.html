@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        boby{
+            text-align:center;
+        }
+        input{
+            width: 200px;
+            padding: 10px;
+        }
+        button{
+            padding: 10px 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>simple calculator</h2>
+    <input type="number" id="n1" placeholder="firstnumber">
+    <br><br>
+    <input type="number" id="n2" placeholder="secondnumber">
+    <br><br>
+    <button onclick="calc('+')">+</button>
+    <button onclick="calc('-')">-</button>
+    <button onclick="calc('*')">*</button>
+    <button onclick="calc('/')">/</button>
+    <h3 id="answer">Result:</h3>
+    <script>
+        function calc(op){
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            let result;
+            if(op == "+")
+                result = a + b;
+            else if(op =="-")
+                result = a-b;
+            else if(op == "*")
+                result=a * b;
+            else
+                result=a / b;
+            document.getElementById("answer").innerHTML="result:"+result;            
+        }
+    </script>
+    </center>
+</body>
+</html>
